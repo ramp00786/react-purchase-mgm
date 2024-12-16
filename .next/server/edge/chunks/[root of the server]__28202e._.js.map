@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 23, "column": 0}, "map": {"version":3,"sources":["turbopack://[project]/middleware.js"],"sourcesContent":["import { NextResponse } from 'next/server'\r\n \r\n// This function can be marked `async` if using `await` inside\r\nexport function middleware(request) {\r\n  return NextResponse.redirect(new URL('/login', request.url))\r\n}\r\n \r\n// See \"Matching Paths\" below to learn more\r\nexport const config = {\r\n  matcher: ['/papers/submit'],\r\n}"],"names":[],"mappings":";;;;AAAA;AAAA;;AAGO,SAAS,WAAW,OAAO;IAChC,OAAO,qLAAA,CAAA,eAAY,CAAC,QAAQ,CAAC,IAAI,IAAI,UAAU,QAAQ,GAAG;AAC5D;AAGO,MAAM,SAAS;IACpB,SAAS;QAAC;KAAiB;AAC7B"}},
+    {"offset": {"line": 38, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}}]
+}

@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 23, "column": 0}, "map": {"version":3,"sources":["turbopack://[project]/src/middleware.js"],"sourcesContent":["import { NextResponse } from 'next/server'\r\n \r\n// This function can be marked `async` if using `await` inside\r\nexport function middleware(request) {\r\n\r\n    const path = request.nextUrl.pathname;\r\n\r\n    const isPublicPath = path === \"/login\" || path === \"/register\" || path === \"/\";\r\n\r\n    const token = request.cookies.get('auth_token')?.value;\r\n\r\n    if(isPublicPath && token ){\r\n        return NextResponse.redirect(new URL('/papers', request.url))\r\n    }\r\n\r\n    if(!isPublicPath && !token ){\r\n        return NextResponse.redirect(new URL('/login', request.url))\r\n    }\r\n    \r\n}\r\n \r\n// See \"Matching Paths\" below to learn more\r\nexport const config = {\r\n  matcher: [\r\n    '/',\r\n    '/papers/submit',\r\n    '/papers',\r\n    '/login',\r\n    '/register'\r\n],\r\n}"],"names":[],"mappings":";;;;AAAA;AAAA;;AAGO,SAAS,WAAW,OAAO;IAE9B,MAAM,OAAO,QAAQ,OAAO,CAAC,QAAQ;IAErC,MAAM,eAAe,SAAS,YAAY,SAAS,eAAe,SAAS;IAE3E,MAAM,QAAQ,QAAQ,OAAO,CAAC,GAAG,CAAC,eAAe;IAEjD,IAAG,gBAAgB,OAAO;QACtB,OAAO,qLAAA,CAAA,eAAY,CAAC,QAAQ,CAAC,IAAI,IAAI,WAAW,QAAQ,GAAG;IAC/D;IAEA,IAAG,CAAC,gBAAgB,CAAC,OAAO;QACxB,OAAO,qLAAA,CAAA,eAAY,CAAC,QAAQ,CAAC,IAAI,IAAI,UAAU,QAAQ,GAAG;IAC9D;AAEJ;AAGO,MAAM,SAAS;IACpB,SAAS;QACP;QACA;QACA;QACA;QACA;KACH;AACD"}},
+    {"offset": {"line": 50, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}}]
+}
