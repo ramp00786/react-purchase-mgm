@@ -3,47 +3,46 @@
   "middleware": {
     "/": {
       "files": [
-        "server/edge/chunks/_e2fc67._.js",
-        "server/edge/chunks/[root of the server]__defe9d._.js",
-        "server/edge/chunks/edge-wrapper_f2e72e.js"
+        "server/edge-runtime-webpack.js",
+        "server/src/middleware.js"
       ],
-      "name": "middleware",
+      "name": "src/middleware",
       "page": "/",
       "matchers": [
         {
-          "regexp": "^(?:\\/(_next\\/data\\/[^/]{1,}))?(?:\\/(\\/?index|\\/?index\\\\.json))?[\\/#\\?]?$",
+          "regexp": "^(?:\\/(_next\\/data\\/[^/]{1,}))?(?:\\/(\\/?index|\\/?index\\.json))?[\\/#\\?]?$",
           "originalSource": "/"
         },
         {
-          "regexp": "^(?:\\/(_next\\/data\\/[^/]{1,}))?\\/papers\\/submit(\\\\.json)?[\\/#\\?]?$",
+          "regexp": "^(?:\\/(_next\\/data\\/[^/]{1,}))?\\/papers\\/submit(\\.json)?[\\/#\\?]?$",
           "originalSource": "/papers/submit"
         },
         {
-          "regexp": "^(?:\\/(_next\\/data\\/[^/]{1,}))?\\/papers(\\\\.json)?[\\/#\\?]?$",
+          "regexp": "^(?:\\/(_next\\/data\\/[^/]{1,}))?\\/papers(\\.json)?[\\/#\\?]?$",
           "originalSource": "/papers"
         },
         {
-          "regexp": "^(?:\\/(_next\\/data\\/[^/]{1,}))?\\/login(\\\\.json)?[\\/#\\?]?$",
+          "regexp": "^(?:\\/(_next\\/data\\/[^/]{1,}))?\\/login(\\.json)?[\\/#\\?]?$",
           "originalSource": "/login"
         },
         {
-          "regexp": "^(?:\\/(_next\\/data\\/[^/]{1,}))?\\/register(\\\\.json)?[\\/#\\?]?$",
+          "regexp": "^(?:\\/(_next\\/data\\/[^/]{1,}))?\\/register(\\.json)?[\\/#\\?]?$",
           "originalSource": "/register"
         }
       ],
       "wasm": [],
       "assets": [],
       "env": {
-        "__NEXT_BUILD_ID": "development",
+        "__NEXT_BUILD_ID": "xgNYY01qK2uqeVEpzx17L",
         "NEXT_SERVER_ACTIONS_ENCRYPTION_KEY": "0u2IXBORsBr8KF8km1BpklY6d1xH4Gsmnge44/OA7XQ=",
-        "__NEXT_PREVIEW_MODE_ID": "70d5474a233a1fe9cb0bbc28623f65b1",
-        "__NEXT_PREVIEW_MODE_ENCRYPTION_KEY": "ab0f2b3a1080a497436431e777593f816be93bb8996733a66eaf3e3b6ddd849f",
-        "__NEXT_PREVIEW_MODE_SIGNING_KEY": "367fc37f78a2fac852fce34391ee9a21279600d24db430453bb4502e12dd1e76"
+        "__NEXT_PREVIEW_MODE_ID": "ecb819fa4aef29caa19472f22a9551b9",
+        "__NEXT_PREVIEW_MODE_ENCRYPTION_KEY": "c648d506af65c2a1bda053c27ff8d755eea4d8058c46e39c733d070268a8976b",
+        "__NEXT_PREVIEW_MODE_SIGNING_KEY": "c190189a33466d1cfd694e1107e94c630faf5cd52cca1372c965ba172dace7c0"
       }
     }
   },
+  "functions": {},
   "sortedMiddleware": [
     "/"
-  ],
-  "functions": {}
+  ]
 }
